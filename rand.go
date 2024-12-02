@@ -72,11 +72,12 @@ func Rand(strLen int, chars string) (string, error) {
 	r := randWithGC{
 		outBitLen: bitLen(maxB),
 	}
+	difference := 8 - r.outBitLen
 
 	out := make([]byte, strLen)
 	i := 0
 	for i < strLen {
-		b, err := r.byte(chunk)
+		b, err := r.byte(chunk, difference)
 		if err != nil {
 			return "", err
 		}
@@ -103,10 +104,7 @@ type randWithGC struct {
 	cache       uint16
 }
 
-// len(chunk) == 1
-func (r *randWithGC) byte(chunk []byte) (byte, error) {
-	difference := 8 - r.outBitLen
-
+func (r *randWithGC) byte(chunk []byte, difference byte) (byte, error) {
 	// read cache
 	if r.cacheBitLen >= r.outBitLen {
 		b := (byte(r.cache) << difference) >> difference
@@ -126,12 +124,10 @@ func (r *randWithGC) byte(chunk []byte) (byte, error) {
 		}
 	}
 
-	b := chunk[0]
-
 	// write cache
 	r.cache <<= difference
-	r.cache |= uint16(b >> r.outBitLen)
+	r.cache |= uint16(chunk[0] >> r.outBitLen)
 	r.cacheBitLen += difference
 
-	return (b << difference) >> difference, nil
+	return (chunk[0] << difference) >> difference, nil
 }

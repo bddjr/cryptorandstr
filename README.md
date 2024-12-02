@@ -12,35 +12,35 @@ go get github.com/bddjr/cryptorandstr
 
 ```
 MustRand10 6
-  961812
-  186418
-  476781
-  683053
-  189178
+  227679
+  901676
+  193607
+  026687
+  243505
 
 MustRand16 27
-  d4ff1e125208f0e2954001b3c6e
-  36c517865848a7444454a7711ca
-  f5348bba35053bfeb962d3822b9
-  df46ffa337732945d6c98ed0276
-  280a987f779f9775d8decffb150
+  017ced60ee75751a027605270fe
+  2d89aa349e78988585524c5d074
+  d155483394a0c8f75becd533faf
+  7714135085cb7967f6ee645edb5
+  0d0e22c51fe5cad882d6a0867d7
 
 MustRand32 27
-  fjq0iakoubcl2sp92ekaq9ftsan
-  mgu2bms5d90ai35mtjdrru3rkfe
-  pt6k8rmsneovn3bq3q1ru2m26bk
-  91rn0793voe4tupdcm2b31rfdd1
-  ank42vo7ju49t0irpmmn65osj5p
+  5e9hoqmhspbsnng2ct2hgosko4e
+  e9f5e7i5i24d9tlf1tef8fgcsba
+  0dhkjpef6nqj1bnm81rhnjgjqjj
+  kj968dr8sc9srpk9roj3go45k8r
+  tvkb7pl542c3v5e3opqg5jcejhm
 
 MustRand64 27
-  bMPa2jTkoJF4NzWgv4wr6Qmc-OK
-  _oWdmJSErNbW1rval-gM7ult-6_
-  KhMddFuOkKCf9eHXx3s11H4AZmE
-  oCvBxMPnZwLV_Bi540RnH8_Nmk6
-  st-G5VLmETyHV8WLhAOEaIWfuEn
+  xA-ZoFjHgQ927Jxnhly7WWRMvjw
+  NIBvnag5JrYhvHZ-NaKEZkmBgco
+  YD3qxeMe7AGlXllP0M07GkTXnMA
+  fC7_-XWOEf-BPv-U5_bRXrkEDqi
+  b1t6xZLgmW2v9KdxGEKqVIp-WAH
 
 PASS
-ok      github.com/bddjr/cryptorandstr  0.253s
+ok      github.com/bddjr/cryptorandstr  0.034s
 ```
 
 ## License
